@@ -12,6 +12,8 @@ services:
       - "16261:16261/udp"
       - "16262:16262/udp"
       - "27015:27015/tcp"
+      - "8766:8766/udp"
+      - "8767:8767/udp"
     volumes:
       # Server data
       - /home/zomboid/data:/home/steam/Zomboid
