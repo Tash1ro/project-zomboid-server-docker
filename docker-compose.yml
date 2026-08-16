@@ -1,6 +1,9 @@
 version: "3.7"
 services:
   ProjectZomboidDedicatedServer:
+    container_name: pzserver
+    labels:
+      - "zomboid-panel.managed=true"
     image: danixu86/project-zomboid-dedicated-server:latest
     restart: unless-stopped
     env_file:
