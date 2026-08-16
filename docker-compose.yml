@@ -10,11 +10,13 @@ services:
         # Reads STEAMAPPBRANCH from your .env file to set the build version (ARG).
         - STEAMAPPBRANCH=${STEAMAPPBRANCH}
     env_file:
-      - .env
+      - stack.env
     ports:
       - "16261:16261/udp"
       - "16262:16262/udp"
       - "27015:27015/tcp"
+      - "8766:8766/udp"
+      - "8767:8767/udp"
     volumes:
       # Server data
       - ${PROJECT_ZOMBOID_DATA:-./data}:/home/steam/Zomboid
